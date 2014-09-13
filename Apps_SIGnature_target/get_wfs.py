@@ -16,15 +16,10 @@ Created on Thu May 01 22:33:15 2014
 import os
 import sys
 from owslib.wfs import WebFeatureService
-
-#from datetime import datetime
-
-#start=datetime.now()
-#print start
     
 def get_wfs(server_url, spacename_wfs):
 
-    chemin = '/home/tmp/'+spacename_wfs+'.gml'
+    chemin = '/tmp/'+spacename_wfs+'.gml'
 
     if not os.path.exists(chemin):
         
@@ -46,17 +41,3 @@ def get_wfs(server_url, spacename_wfs):
 
 if __name__ == '__main__':
     get_wfs(sys.argv[1], sys.argv[2])
-    
-
-#server_url = "http://geoxxx.agrocampus-ouest.fr/geoserverwps/geouest"
-
-#spacename_wcs = "geouest:spot_2012-30-09_up-l"
-
-#spacename_wcs = "geouest:spot_2012-09-09_up-r"
-
-#spacename_wfs = "geouest:ROI_up-l"
-
-
-
-#server_url = "http://geobretagne.fr/geoserver/ref"
-#spacename_wcs = "ref:landsat_bretagne"
