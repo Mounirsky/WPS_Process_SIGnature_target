@@ -17,14 +17,9 @@ import os
 import sys
 from owslib.wcs import WebCoverageService
 
-#from datetime import datetime
-
-#start=datetime.now()
-#print start
-
 def get_wcs(server_url, spacename_wcs):
 
-    chemin = '/home/tmp/'+spacename_wcs+'.tif'
+    chemin = '/tmp/'+spacename_wcs+'.tif'
     
     if not os.path.exists(chemin):
         
@@ -70,17 +65,3 @@ def get_wcs(server_url, spacename_wcs):
 
 if __name__ == '__main__':
     get_wcs(sys.argv[1], sys.argv[2])
-    
-
-#server_url = "http://geoxxx.agrocampus-ouest.fr/geoserverwps/geouest"
-
-#spacename_wcs = "geouest:Mosaic-Spot_2012"
-
-#spacename_wcs = "geouest:spot_2012-09-09_up-r"
-
-#spacename_wfs = "geouest:ROI_up-l"
-
-
-
-#server_url = "http://geobretagne.fr/geoserver/ref"
-#spacename_wcs = "ref:landsat_bretagne"
