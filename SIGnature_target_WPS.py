@@ -112,8 +112,8 @@ class Process(WPSProcess):
         url_wfs_ROI = "http://geoxxx.agrocampus-ouest.fr/geoserverwps/geouest"
         url_geoserver = "http://geoxxx.agrocampus-ouest.fr/geoserverwps"
         nomVectOut = "Jussie_"+suffix
-        login = "gi2014"
-        password = "gi20132014"
+        login = "login_geoserver"
+        password = "password_geoserver"
         workspace = "geouest"
         
         # Télécharger l'image en WCS
