@@ -21,9 +21,9 @@ curl -v -u $1:$2 -XPUT -H "Content-type: text/plain" -d "file:///home/data/geose
 curl -u $1:$2 -XPUT -H 'Content-type: text/xml' -d '<layer><defaultStyle><name>jussie_'$6'class</name><workspace>geouest</workspace></defaultStyle></layer>' $4/rest/layers/geouest:$5
 
 # Envoi d'un e-mail avec la référence de la couche publiée (ref : http://documentation.mailgun.com/user_manual.html#sending-via-api)
-curl -s --user 'api:key-3h8v3f-mj6-wx7kj1k2koy8mhzbposj9' \
-    https://api.mailgun.net/v2/sandboxa82f4c39303b4533ac2e3888adfe73dc.mailgun.org/messages \
-    -F from='Geouest <postmaster@sandboxa82f4c39303b4533ac2e3888adfe73dc.mailgun.org>' \
+curl -s --user 'api:YourAPIkey' \
+    https://api.mailgun.net/v2/yourToken.mailgun.org/messages \
+    -F from='Geouest <postmaster@yourToken.mailgun.org>' \
     -F to=$7\
     -F subject='Message de Geoxxx' \
     -F text='Le taitement et terminé et votre couche nomée "'$5'" a été publiée avec succé !
